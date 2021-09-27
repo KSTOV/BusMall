@@ -3,7 +3,7 @@
 const productImages = [];
 const totalClick = 0;
 
-function Image(url, name)
+function ImageProduct(url, name)
 {
     this.name = name;
     this.clicks = 0;
@@ -75,24 +75,26 @@ leftImageEl.addEventListener('click', handleClick);
 rightImageEl.addEventListener('click', handleClick);
 middleImageEl.addEventListener('click', handleClick);
 
-new Image('bag.jpg', 'bag');
-new Image('banana.jpg', 'banana');
-new Image('bathroom.jpg', 'bathroom');
-new Image('boots.jpg', 'boots');
-new Image('breakfast.jpg', 'breakfast');
-new Image('bubblegum.jpg', 'bubblegum');
-new Image('chair.jpg', 'chair');
-new Image('cthulhu.jpg', 'cthulhu');
-new Image('dog-duck.jpg', 'dog-duck');
-new Image('dragon.jpg', 'dragon');
-new Image('pen.jpg', 'pen');
-new Image('pet-sweep.jpg', 'pet-sweep');
-new Image('scissors.jpg', 'scissors');
-new Image('shark.jpg', 'shark');
-new Image('sweep.png', 'sweep');
-new Image('tauntaun.jpg', 'tauntaun.');
-new Image('unicorn.jpg', 'unicorn');
-new Image('water-can.jpg', 'water-can');
-new Image('wine-glass.jpg', 'wine-glass')
+new ImageProduct('bag.jpg', 'bag');
+new ImageProduct('banana.jpg', 'banana');
+new ImageProduct('bathroom.jpg', 'bathroom');
+new ImageProduct('boots.jpg', 'boots');
+new ImageProduct('breakfast.jpg', 'breakfast');
+new ImageProduct('bubblegum.jpg', 'bubblegum');
+new ImageProduct('chair.jpg', 'chair');
+new ImageProduct('cthulhu.jpg', 'cthulhu');
+new ImageProduct('dog-duck.jpg', 'dog-duck');
+new ImageProduct('dragon.jpg', 'dragon');
+new ImageProduct('pen.jpg', 'pen');
+new ImageProduct('pet-sweep.jpg', 'pet-sweep');
+new ImageProduct('scissors.jpg', 'scissors');
+new ImageProduct('shark.jpg', 'shark');
+new ImageProduct('sweep.png', 'sweep');
+new ImageProduct('tauntaun.jpg', 'tauntaun.');
+new ImageProduct('unicorn.jpg', 'unicorn');
+new ImageProduct('water-can.jpg', 'water-can');
+new ImageProduct('wine-glass.jpg', 'wine-glass');
 
 renderProducts();
+
+console.log(productImages);

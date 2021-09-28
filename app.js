@@ -18,23 +18,23 @@ let middleImageEl = document.getElementById('middleImage');
 
 function renderProducts()
 {
-    let leftImageIndex = Math.floor(Math.random() * productImages.push.length);
-    let rightImageIndex = Math.floor(Math.random() * productImages.push.length);
-    let middleImageIndex = Math.floor(Math.random() * productImages.push.length);
+    let leftImageIndex = Math.floor(Math.random() * productImages.length);
+    let rightImageIndex = Math.floor(Math.random() * productImages.length);
+    let middleImageIndex = Math.floor(Math.random() * productImages.length);
 
     while (leftImageIndex === rightImageIndex)
     {
-        rightImageIndex = Math.floor(Math.random() * productImages.push.length);
+        rightImageIndex = Math.floor(Math.random() * productImages.length);
     }
 
     while (leftImageIndex === middleImageIndex)
     {
-        middleImageIndex = Math.floor(Math.random() * productImages.push.length);
+        middleImageIndex = Math.floor(Math.random() * productImages.length);
     }
 
     while (rightImageIndex === middleImageIndex)
     {
-        middleImageIndex = Math.floor(Math.random() * productImages.push.length);
+        middleImageIndex = Math.floor(Math.random() * productImages.length);
     }
 
     let left = productImages[leftImageIndex];

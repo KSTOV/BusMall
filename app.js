@@ -176,6 +176,7 @@ let genDataTime = function(images)
 function makeImageChart()
 {
 let ctx = document.getElementById('myChart').getContext('2d');
+Chart.defaults.font.size = 22;
 let myChart = new Chart(ctx, {
   type: 'bar',
   data: {
@@ -185,63 +186,26 @@ let myChart = new Chart(ctx, {
       data: genDataClicks(ProductImage.allImages),
       backgroundColor: [
         'rgba(30, 30, 30, 0.6)',
-        'rgba(30, 30, 30, 0.6)',
-        'rgba(30, 30, 30, 0.6)',
-        'rgba(30, 30, 30, 0.6)',
-        'rgba(30, 30, 30, 0.6)',
-        'rgba(30, 30, 30, 0.6)',
-        'rgba(30, 30, 30, 0.6)',
-        'rgba(30, 30, 30, 0.6)',
-        'rgba(30, 30, 30, 0.6)',
-        'rgba(30, 30, 30, 0.6)',
-        'rgba(30, 30, 30, 0.6)',
-        'rgba(30, 30, 30, 0.6)',
-        'rgba(30, 30, 30, 0.6)',
-        'rgba(30, 30, 30, 0.6)',
-        'rgba(30, 30, 30, 0.6)',
-        'rgba(30, 30, 30, 0.6)',
-        'rgba(30, 30, 30, 0.6)',
-        'rgba(30, 30, 30, 0.6)',
-        'rgba(30, 30, 30, 0.6)',
-        'rgba(30, 30, 30, 0.6)',
       ],
-      borderWidth: 1
     },
     {
       label: 'Times Shown',
       data: genDataTime(ProductImage.allImages),
       backgroundColor: [
         'rgba(255, 102, 0, 0.6)',
-        'rgba(255, 102, 0, 0.6)',
-        'rgba(255, 102, 0, 0.6)',
-        'rgba(255, 102, 0, 0.6)',
-        'rgba(255, 102, 0, 0.6)',
-        'rgba(255, 102, 0, 0.6)',
-        'rgba(255, 102, 0, 0.6)',
-        'rgba(255, 102, 0, 0.6)',
-        'rgba(255, 102, 0, 0.6)',
-        'rgba(255, 102, 0, 0.6)',
-        'rgba(255, 102, 0, 0.6)',
-        'rgba(255, 102, 0, 0.6)',
-        'rgba(255, 102, 0, 0.6)',
-        'rgba(255, 102, 0, 0.6)',
-        'rgba(255, 102, 0, 0.6)',
-        'rgba(255, 102, 0, 0.6)',
-        'rgba(255, 102, 0, 0.6)',
-        'rgba(255, 102, 0, 0.6)',
-        'rgba(255, 102, 0, 0.6)',
-        'rgba(255, 102, 0, 0.6)',
       ],
-      borderWidth: 1
     }
     ],
   },
-  options: {
-    scales: {
-      yAxes: [{
-        ticks: {
+  options: 
+  {
+    scales: 
+    {
+      yAxes: 
+      [{
+        ticks: 
+        {
           beginAtZero: true,
-          stepSize: 1
         }
       }]
     }

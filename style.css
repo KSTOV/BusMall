@@ -40,3 +40,8 @@ h2
     padding: 0;
     margin-bottom: 20px;
 }
+
+#myChart
+{
+    padding: 0px 50px 150px 50px;
+}

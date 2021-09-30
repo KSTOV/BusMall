@@ -25,6 +25,23 @@ let ProductImage = function(url, product)
 
 ProductImage.allImages = [];
 
+function  updateLocalStorage() 
+{
+  let arrString = JSON.stringify(ProductImage.allImages);
+  localStorage.setItem('data', arrString);
+}
+
+function getPreviousData() 
+{
+  let localData = localStorage.getItem('data');
+  let productData = JSON.parse(localData);
+
+  if (productData !== null) 
+  {
+    Product.allImages = productData;
+  }
+}
+
 let renderNewImages = function(leftImageIndex, middleImageIndex, rightImageIndex) 
 {
   leftImage.src = ProductImage.allImages[leftImageIndex].url;
@@ -102,8 +119,10 @@ let handleClick = function(event)
     {
       productImages.removeEventListener('click', handleClick)
       showResults();
+      updateLocalStorage();
     }
   };
+
 
   let showResults = function ()
   {
@@ -115,7 +134,8 @@ let handleClick = function(event)
     //   let resultItem = document.createElement ('li');
     //   resultItem.textContent = `${ProductImage.allImages[i].product} was clicked ${ProductImage.allImages[i].clicks} times, and shown ${ProductImage.allImages[i].timeshown} times`;
     //   resultsList.appendChild(resultItem);
-      makeImageChart()
+      makeImageChart();
+      updateLocalStorage();
     }
   };
 
